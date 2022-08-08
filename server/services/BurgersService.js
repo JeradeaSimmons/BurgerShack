@@ -8,6 +8,12 @@ class BurgersService {
         return Fake_DB.burgers
     }
 
+    async createBurger(burgerData) {
+        burgerData.id = Fake_DB.burgers.length
+        Fake_DB.burgers.push(burgerData)
+        return burgerData
+    }
+
 
 
 
